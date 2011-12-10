@@ -2,7 +2,23 @@
 # coding: utf-8
 # Wentao Han <wentao.han@gmail.com>
 
-"""A terminal XMPP chat program."""
+"""
+A terminal XMPP chat program.
+
+Usage: chat.py [options]
+
+Options:
+  -h, --help            show this help message and exit
+  --debug               log debug information to file
+  -j JID, --jid=JID     JID to use
+  -p PASSWORD, --password=PASSWORD
+                        password to use
+
+Commands:
+    /msg <who> <text>   send message and save target, so next time you just
+                        need to type message itself to send
+    /quit               exit from XMPPii
+"""
 
 import curses
 import getpass
@@ -57,7 +73,7 @@ class Console:
         self.input_win.refresh()
 
     def gets(self):
-        # TODO: readline
+        # TODO: add readline-like function
         # FIXME: multibyte character not deleted entirely
         return self.input_win.getstr()
 
