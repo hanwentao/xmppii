@@ -1,2 +1,4 @@
 add readline-like function for input
+support multibyte character deletion for input
 add buddy list (roster)
+resize window

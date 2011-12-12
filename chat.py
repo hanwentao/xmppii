@@ -104,7 +104,7 @@ class ChatClient(sleekxmpp.ClientXMPP):
                 first = False
                 self.console.printf('%s %-10.10s> %s\n', time_string(), msg['from'], line)
             else:
-                self.console.printf('                            > %s\n', line)
+                self.console.printf('                              > %s\n', line)
 
 def main(argv):
     parser = optparse.OptionParser()
